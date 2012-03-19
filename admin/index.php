@@ -28,7 +28,7 @@ $results = $db->query('
 
 	<?php foreach ($results as $garden) : ?>
 		<li>
-			<a href="single.php?id=<?php echo $garden['id']; ?>"><?php echo $garden['name']; ?></a>
+			<?php echo $garden['name']; ?>
 			&bull;
 			<a href="edit.php?id=<?php echo $garden['id']; ?>">Edit</a>
 			&bull;
