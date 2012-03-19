@@ -6,6 +6,7 @@ $results = $db->query('
 	SELECT id, name, street_address, longitude, latitude
 	FROM garden_locations
 	ORDER BY name ASC
+	LIMIT 10
 ');
 
 ?><!DOCTYPE HTML>
