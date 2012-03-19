@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			WHERE id = :id
 		');
 
+		$sql->bindValue(':id', $id, PDO::PARAM_INT);
 		$sql->bindValue(':name', $name, PDO::PARAM_STR);
 		$sql->bindValue(':street_address', $street_address, PDO::PARAM_STR);
 		$sql->bindValue(':longitude', $longitude, PDO::PARAM_STR);
