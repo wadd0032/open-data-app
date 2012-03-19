@@ -42,5 +42,8 @@ if (empty($results)) {
 	<p>Longitude: <?php echo $results['longitude']; ?></p>
 	<p>Latitude: <?php echo $results['latitude']; ?></p>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/open-data-app.js"></script>
+
 </body>
 </html>
