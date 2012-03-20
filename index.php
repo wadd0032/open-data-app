@@ -1,5 +1,9 @@
 <?php
 
+$title = 'Home';
+
+include 'includes/wrapper-top.php';
+
 require_once 'includes/db.php';
 
 $results = $db->query('
@@ -9,28 +13,24 @@ $results = $db->query('
 	LIMIT 10
 ');
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Ottawa Community Gardens</title>
-	<link href="css/general.css" rel="stylesheet">
+?>
 
-</head>
-<body>
-	<h1>Ottawa Community Gardens</h1>
-	
-	<ul>
 
+
+<ul class="garden-list">
 	<?php foreach ($results as $garden) : ?>
-		<li>
-			<a href="single.php?id=<?php echo $garden['id']; ?>"><?php echo $garden['name']; ?></a>
+		<li itemscope itemtype="http://schema.org/CivicStructure">
+			<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
+			<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+				<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
+				<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
+			</span>
 		</li>
 	<?php endforeach; ?>
-	</ul>
+</ul>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="js/open-data-app.js"></script>
+<div id="map"></div>
 
-</body>
-</html>
+<?php
+	include_once 'includes/wrapper-bottom.php';
+?>
