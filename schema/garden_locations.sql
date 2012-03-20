@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 12, 2012 at 05:14 PM
+-- Generation Time: Mar 19, 2012 at 06:28 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `garden_locations` (
   `longitude` double NOT NULL,
   `latitude` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `garden_locations`
@@ -44,11 +44,11 @@ INSERT INTO `garden_locations` (`id`, `name`, `street_address`, `longitude`, `la
 (3, 'Carlington Community Garden', '900 Merivale Rd.', -75.7346269034471, 45.382842490324),
 (4, 'Centretown Community Garden', '461 Lisgar St.', -75.7016583295769, 45.415195101353),
 (5, 'Chateau Donald Community Garden', '251 Donald St.', -75.6577031103256, 45.4293097723174),
-(6, 'Children''s Garden', '321 Main St.', -75.6759578122613, 45.406127619525),
+(6, 'Children’s Garden', '321 Main St.', -75.6759578122613, 45.406127619525),
 (7, 'Debra Dynes Family House Community Garden', '955 Debra Ave.', -75.7060251774863, 45.3680604451643),
 (8, 'Friendship Community Garden', '1240/1244 Donald St.', -75.6361507417946, 45.4273895810549),
-(9, 'Gloucester Allotment Gardens', 'N/A Corner of Weir and Anderson', -75.5676971825545, 45.420592825487),
-(10, 'GO-VEG (Glebe Organic Vegetable Garden) / Corpus-Christi Children''s Garden', '185 Fifth Ave.', -75.6919950762557, 45.4012929697314),
+(9, 'Gloucester Allotment Gardens', 'Corner of Weir and Anderson', -75.5676971825545, 45.420592825487),
+(10, 'GO-VEG (Glebe Organic Vegetable Garden) / Corpus-Christi Children’s Garden', '185 Fifth Ave.', -75.6919950762557, 45.4012929697314),
 (11, 'Go Green Community Garden', '110 Laurier Ave.', -75.6893017438533, 45.4210842738369),
 (12, 'Jardin Arrowsmith Thyme-Less Community Garden', '2040 Arrowsmith Drive', -75.5953760439295, 45.4385515707265),
 (13, 'Jardin Communautaire Orleans Community Garden', '3350 St Joseph Blvd.', -75.4989466307579, 45.4837565286994),
@@ -61,7 +61,7 @@ INSERT INTO `garden_locations` (`id`, `name`, `street_address`, `longitude`, `la
 (20, 'Nepean Allotment Garden', '230 Viewmont', -75.7180421437094, 45.3465105482307),
 (21, 'Operation Go Home Community Garden', '179 Murray St.', -75.6907938739199, 45.4310697631841),
 (22, 'Ottawa East Community Garden', '249/223/175 Main St.', -75.6755847910067, 45.408059625321),
-(23, 'Rochester Heights Children''s Garden', '299 Rochester St.', -75.708440804817, 45.4045126456476),
+(23, 'Rochester Heights Children’s Garden', '299 Rochester St.', -75.708440804817, 45.4045126456476),
 (24, 'Sandy Hill CG', '3 Hurdman Rd.', -75.6680134788833, 45.4199458444146),
 (25, 'Somali CG', '1975 Kilborn Ave.', -75.639200787966, 45.3895870241171),
 (26, 'Strathcona Heights Community Garden', '3 Hurdman Rd.', -75.669424051288, 45.4187323045188),
