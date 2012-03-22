@@ -8,34 +8,32 @@ $results = $db->query('
 	ORDER BY name ASC
 ');
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Admin. &middot; Ottawa Community Gardens</title>
-	<link href="../css/general.css" rel="stylesheet">
+include_once 'includes/wrapper-top.php';
 
-</head>
-<body>
+?>
+
+<div id="revisions">
 	<h1>Admin. &middot; Ottawa Community Gardens</h1>
-	
 	
 	<div class="button">
 		<a href="add.php">Add a Garden</a>
 	</div>
 
 	<ul>
-
-	<?php foreach ($results as $garden) : ?>
-		<li>
-			<?php echo $garden['name']; ?>
-			&bull;
-			<a href="edit.php?id=<?php echo $garden['id']; ?>">Edit</a>
-			&bull;
-			<a href="delete.php?id=<?php echo $garden['id']; ?>">Delete</a>
-		</li>
-	<?php endforeach; ?>
+		<?php foreach ($results as $garden) : ?>
+			<li>
+				<?php echo $garden['name']; ?>
+				&bull;
+				<a href="edit.php?id=<?php echo $garden['id']; ?>">Edit</a>
+				&bull;
+				<a href="delete.php?id=<?php echo $garden['id']; ?>">Delete</a>
+			</li>
+		<?php endforeach; ?>
 	</ul>
+</div>
 
-</body>
-</html>
+<?php
+
+include_once 'includes/wrapper-bottom.php';
+
+?>
