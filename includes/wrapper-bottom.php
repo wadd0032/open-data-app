@@ -6,7 +6,7 @@
 	<script src="js/open-data-app.js"></script>
 
 	<footer>
-		<p>© <?php echo date('Y'); ?> Fuse Communication. All Rights Reserved</p>
+		<p>© <?php echo date('Y'); ?> Fuse Communication</p>
 	</footer>
 	
 </body>
