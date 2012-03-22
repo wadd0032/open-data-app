@@ -11,14 +11,34 @@ body {
 	font: normal 100%/1.5 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+.clearfix:before,
+.clearfix:after
+{
+	content:"";
+	display: table;
+}
+
+.clearfix:after
+{
+	clear: both;
+}
+
+.clearfix
+{
+	*zoom: 1;
+}
+
 .masthead {
-	width: 100%;
-	background: url("../images/grass.jpg") repeat left top;
+	margin: 0;
+	padding:0;
 	
-	colour: #660099;
-	font: normal 4em/1.5 'Princess Sofia', cursive;
-	text-shadow: 0px 0px 10px #e2c02a;
-	filter: dropshadow(color=#e2c02a, offx=0, offy=0); 
+	display: block;
+	width: 100%;
+	
+	background: url("..images/banner-320.jpg") no-repeat left top;
+	
+	overflow: hidden;
+	text-indent: -999em;
 }
 
 #map {
