@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title><?php if (isset($title)) { echo $title . ' · '; } ?>Ottawa Community Gardens</title>
 	<link href="css/public.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Princess+Sofia' rel='stylesheet' type='text/css'>
 	<script src="js/modernizr.dev.js"></script>
 </head>
 
