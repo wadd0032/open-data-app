@@ -14,7 +14,7 @@ $(document).ready(function () {
 	var infoWindow;
 
 	// Loop through all the places and add a marker to the GMap
-	$('.garden-list li').each(function (i, elem) {
+	$('.garden-list > li').each(function (i, elem) {
 		var garden = $(this).find('a').html();
 
 		// Create some HTML content for the info window
@@ -34,7 +34,7 @@ $(document).ready(function () {
 			position : pos
 			, map : map
 			, title : garden
-			, icon : 'images/bone.png'
+			, icon : 'images/leaf-icon.png'
 			, animation: google.maps.Animation.DROP
 		});
 
