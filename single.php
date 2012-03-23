@@ -43,7 +43,7 @@ include_once 'includes/wrapper-top.php';
 	<h1><?php echo $garden['name']; ?></h1>
 	<dl>
 		<dt>Address</dt><dd><?php echo $garden['street_address']; ?></dd>
-		<dt>Phone</dt><dd><?php echo $garden['phone']; ?></dd>
+		<dt>Contact</dt><dd><?php echo $garden['contact']; ?></dd>
 		<dt>E-mail</dt><dd><?php echo $garden['email']; ?></dd>
 		<dt>Web</dt><dd><?php echo $garden['url']; ?></dd>
 		<dt>Longitude</dt><dd><?php echo $garden['longitude']; ?></dd>
