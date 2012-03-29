@@ -1,5 +1,8 @@
 /*min-width = 320px; max-width = 599;*/
 
+/**********************
+			DEFAULT
+**********************/
 html{ 
 	margin: 0;
 	padding:0;
@@ -11,6 +14,83 @@ body {
 	font: normal 100%/1.5 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+header {
+	margin: 0;
+	padding:0;
+	
+	display: block;
+	width: 100%;
+	height: 107px;
+	
+	background: url("../images/banner-320.jpg") no-repeat left top;
+}
+
+header h1 {
+	margin: 0;
+	padding:0;
+	overflow: hidden;
+	text-indent: -999em;
+}
+
+.wrapper{
+	position: relative;	
+}
+#main-list {
+	width: 55%;
+}
+
+#map {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45%;
+	height: 700px;
+}
+
+
+
+/*min-width = 600px; max-width = 999;*/
+@media screen and (min-width: 600px)
+{
+
+header {
+	background: url("../images/banner-600.jpg") no-repeat left top;
+	height: 151px;
+}
+
+}
+
+
+/*min-width = 1000px; max-width = 1499;*/
+@media screen and (min-width: 1000px)
+{
+
+header {
+	background: url("../images/banner-1000.jpg") no-repeat left top;
+	height: 222px;
+}
+
+
+}
+
+
+/*min-width = 1500px; max-width = 1800;*/
+@media screen and (min-width: 1500px)
+{
+
+
+header {
+	background: url("../images/banner-1500.jpg") no-repeat left top;
+	height: 267px;
+}
+
+}
+
+
+/**********************
+			SPECIAL
+**********************/
 .clearfix:before,
 .clearfix:after
 {
@@ -26,62 +106,4 @@ body {
 .clearfix
 {
 	*zoom: 1;
-}
-
-.masthead {
-	margin: 0;
-	padding:0;
-	
-	display: block;
-	width: 100%;
-	height: 107px;
-	
-	background: url("..images/banner-320.jpg") no-repeat left top;
-	
-	overflow: hidden;
-	text-indent: -999em;
-}
-
-#map {
-	bottom: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 75%;
-}
-
-
-/*min-width = 600px; max-width = 999;*/
-@media screen and (min-width: 600px)
-{
-
-.masthead {
-	background: url("..images/banner-600.jpg") no-repeat left top;
-	height: 151px;
-}
-
-}
-
-
-/*min-width = 1000px; max-width = 1499;*/
-@media screen and (min-width: 1000px)
-{
-
-.masthead {
-	background: url("..images/banner-1000.jpg") no-repeat left top;
-	height: 222px;
-}
-
-
-}
-
-
-/*min-width = 1500px; max-width = 1800;*/
-@media screen and (min-width: 1500px)
-{
-.masthead {
-	background: url("..images/banner-1500.jpg") no-repeat left top;
-	height: 267px;
-}
-
 }
