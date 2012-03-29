@@ -22,7 +22,7 @@ $(document).ready(function () {
 		var infoWindow;
 
 		// Loop through all the places and add a marker to the GMap
-		$('.garden-list >tr').each(function (i, elem) {
+		$('.garden-list > li').each(function (i, elem) {
 			var garden = $(this).find('a').html();
 
 			// Create some HTML content for the info window
@@ -50,7 +50,7 @@ $(document).ready(function () {
 			var marker = new google.maps.Marker({
 				position : pos
 				, map : map
-				, title : garden
+				, title : dino
 				, icon : 'images/leaf-icon.png'
 				, animation: google.maps.Animation.DROP
 			});
@@ -154,13 +154,13 @@ $(document).ready(function () {
 		// You may want to do something different like clone() the list and display it in a new tab
 		for (var j = 0; j < totalLocs; j++) {
 			// Find the <li> element that matches the current location
-			var $td = $gardenList.find('[data-id="' + locDistances[j].id + '"]');
+			var $li = $gardenList.find('[data-id="' + locDistances[j].id + '"]');
 
 			// Add the distance to the start
 			// `toFixed()` makes the distance only have 1 decimal place
-			$td.find('.distance').html(locDistances[j].distance.toFixed(1) + ' km');
+			$li.find('.distance').html(locDistances[j].distance.toFixed(1) + ' km');
 
-			$gardenList.append($td);
+			$gardenList.append($li);
 		}
 	}
 
