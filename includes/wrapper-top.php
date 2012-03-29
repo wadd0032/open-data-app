@@ -9,6 +9,6 @@
 
 <body>
 	
-	<header class="masthead">
+	<header>
 		<h1>Ottawa Community Gardens</h1>
 	</header>
