@@ -12,22 +12,15 @@ include_once 'includes/wrapper-top.php';
 
 ?>
 <div class="wrapper">
-	<div id="main-list">
+	<div id="main-list" class="gradient">
 		<div class="geolocation">
-			<button id="geo">Find Me</button>
-			<p>Enter location</p>
+			<button id="geo">Where Am I?</button>
 			<form id="geo-form">
-				<input id="adr" placeholder="Location">
+				<input id="adr" placeholder="Location: address, intersection or postal code">
 			</form>
 		</div>
 		
-		<table>
-			<thead>
-				<th>Location</th>
-				<th>Rating</th>
-			</thead>
-			<tbody class="garden-list">
-				
+	<ul class="garden-list">
 			<?php foreach ($results as $garden) : ?>
 				<?php
 					if ($garden['rate_count'] > 0) {
@@ -36,34 +29,23 @@ include_once 'includes/wrapper-top.php';
 						$rating = 0;
 					}
 				?>
-
-				<tr>
-					<td itemscope itemtype="http://schema.org/CivicStructure" data-id="<?php echo $garden['id']; ?>">
+				<li itemscope itemtype="http://schema.org/CivicStructure" data-id="<?php echo $garden['id']; ?>">
+					<strong class="distance"></strong>
 						<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
 						<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 							<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
 							<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
 						</span>
-					</td>
-					<td>
+						<!--	<meter value="<?php //echo $rating; ?>" min="0" max="5"><?php //echo $rating; ?> out of 5</meter>	-->
 						<ol class="rater">
-							<?php for ($i = 1; $i <= 5; $i++) : ?>
+						<?php for ($i = 1; $i <= 5; $i++) : ?>
 							<?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
 							<li class="rater-level <?php echo $class; ?>">★</li>
 							<?php endfor; ?>
 						</ol>
-					</td>
-				</tr>
-				
-				<?php endforeach; ?>
-				
-				</tbody>
-			</table>
-			
-			
-			
-
-
+				</li>
+			<?php endforeach; ?>
+		</ul>
 	</div>
 	
 	<div id="map"></div>
