@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1); 
 
 // Gets an environment variable we created in the .htaccess file
 // This is the best way to keep usernames and passwords out of public GitHub repos
