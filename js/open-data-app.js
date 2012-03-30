@@ -50,7 +50,7 @@ $(document).ready(function () {
 			var marker = new google.maps.Marker({
 				position : pos
 				, map : map
-				, title : dino
+				, title : garden
 				, icon : 'images/leaf-icon.png'
 				, animation: google.maps.Animation.DROP
 			});

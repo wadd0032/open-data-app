@@ -1,4 +1,14 @@
 <?php
+/**
+ * Displays the list and map for the open data set
+ *
+ * @package Ottawa Community Gardens
+ * @copyright 2012 Deanna Wadden
+ * @author Deanna Wadden <deannawadden@rogers.com>
+ * @link https://wadd0032@github.com/wadd0032/open-data-app.git
+ * @license 
+ * @version 1.0.0
+ */
 
 require_once 'includes/db.php';
 
@@ -6,12 +16,13 @@ $results = $db->query('
 	SELECT id, name, street_address, longitude, latitude,  rate_count, rate_total
 	FROM garden_locations
 	ORDER BY name ASC
+	LIMIT 10
 ');
 
 include_once 'includes/wrapper-top.php';
 
 ?>
-<div class="wrapper">
+
 	<div id="main-list" class="gradient">
 		<div class="geolocation">
 			<button id="geo">Where Am I?</button>
@@ -36,7 +47,7 @@ include_once 'includes/wrapper-top.php';
 							<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
 							<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
 						</span>
-						<!--	<meter value="<?php //echo $rating; ?>" min="0" max="5"><?php //echo $rating; ?> out of 5</meter>	-->
+							<meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>	
 						<ol class="rater">
 						<?php for ($i = 1; $i <= 5; $i++) : ?>
 							<?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
@@ -49,7 +60,6 @@ include_once 'includes/wrapper-top.php';
 	</div>
 	
 	<div id="map"></div>
-</div>
 
 
 <?php
