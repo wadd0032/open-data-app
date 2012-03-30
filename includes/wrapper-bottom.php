@@ -4,7 +4,7 @@
 	<script src="js/open-data-app.js"></script>
 
 	<footer>
-		<p>© <?php echo date('Y'); ?> Fuse Communication</p>
+		<p>© <?php echo date('Y'); ?> Deanna Wadden, Fuse Communication</p>
 	</footer>
 	
 </body>

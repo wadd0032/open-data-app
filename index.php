@@ -22,16 +22,19 @@ $results = $db->query('
 include_once 'includes/wrapper-top.php';
 
 ?>
-
+<div class="wrapper">
+	<div id="geolocation">
+		<button id="geo">Where Am I?</button>
+		<form id="geo-form">
+			<input type="text" id="adr" placeholder="Location: address, intersection or postal code">
+			<input type="submit">
+		</form>
+	</div>
+	
+	<div id="map"></div>
+	
 	<div id="main-list" class="gradient">
-		<div class="geolocation">
-			<button id="geo">Where Am I?</button>
-			<form id="geo-form">
-				<input id="adr" placeholder="Location: address, intersection or postal code">
-			</form>
-		</div>
-		
-	<ul class="garden-list">
+		<ul class="garden-list">
 			<?php foreach ($results as $garden) : ?>
 				<?php
 					if ($garden['rate_count'] > 0) {
@@ -58,10 +61,8 @@ include_once 'includes/wrapper-top.php';
 			<?php endforeach; ?>
 		</ul>
 	</div>
-	
-	<div id="map"></div>
 
-
+</div>
 <?php
 
 include_once 'includes/wrapper-bottom.php';
