@@ -4,7 +4,7 @@ require_once '../includes/db.php';
 require_once '../includes/users.php';
 
 if (user_signed_in()) {
-	header('Location: index.php');
+	header('Location: /index.php');
 	exit;
 }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		} else {
 			if (passwords_match($password, $user['password'])) {
 				user_sign_in($user['id']);
-				header('Location: index.php');
+				header('Location: /index.php');
 				exit;
 			} else {
 				$errors['password-no-match'] = true;

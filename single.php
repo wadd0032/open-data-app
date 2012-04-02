@@ -3,7 +3,7 @@
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
-	header('Location: index.php');
+	header('Location: /index.php');
 	exit;
 }
 
@@ -11,7 +11,7 @@ require_once 'includes/db.php';
 require_once 'includes/functions.php';
 
 $sql = $db->prepare('
-	SELECT id, name, street_address, longitude, latitude,  rate_count, rate_total
+	SELECT id, name, street_address, contact, email, url, longitude, latitude,  rate_count, rate_total
 	FROM garden_locations
 	WHERE id = :id
 ');
@@ -21,7 +21,7 @@ $sql->execute();
 $garden = $sql->fetch();
 
 if (empty($garden)) {
-	header('Location: index.php');
+	header('Location: /index.php');
 	exit;
 }
 

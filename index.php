@@ -16,7 +16,7 @@ $results = $db->query('
 	SELECT id, name, street_address, longitude, latitude,  rate_count, rate_total
 	FROM garden_locations
 	ORDER BY name ASC
-	LIMIT 10
+	
 ');
 
 include_once 'includes/wrapper-top.php';
@@ -45,10 +45,10 @@ include_once 'includes/wrapper-top.php';
 						}
 					?>
 					
-					<tr>
-						<td class="names" itemscope itemtype="http://schema.org/CivicStructure" data-id="<?php echo $garden['id']; ?>">
+					<tr data-id="<?php echo $garden['id']; ?>">
+						<td class="names" itemscope itemtype="http://schema.org/CivicStructure">
 							<strong class="distance"></strong>
-								<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
+								<a href="garden/<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
 								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 									<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
 									<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
@@ -64,7 +64,6 @@ include_once 'includes/wrapper-top.php';
 						</td>
 					</tr>
 				<?php endforeach; ?>
-	<!--			</ul>-->		
 			</tbody>
 		</table>
 	</div>

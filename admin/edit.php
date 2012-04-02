@@ -7,7 +7,7 @@ $errors = array();
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
-	header('Location: index.php');
+	header('Location: /index.php');
 	exit;
 }
 
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$sql->bindValue(':latitude', $latitude, PDO::PARAM_STR);
 		$sql->execute();
 
-		header('Location: index.php');
+		header('Location: /index.php');
 		exit;
 	}
 } else {

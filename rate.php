@@ -8,12 +8,12 @@ $rate = filter_input(INPUT_GET, 'rate', FILTER_SANITIZE_NUMBER_INT);
 $cookie = get_rate_cookie();
 
 if (empty($id)) {
-	header('Location: index.php');
+	header('Location: /index.php');
 	exit;
 }
 
 if (isset($cookie[$id]) || $rate < 0 || $rate > 5) {
-	header('Location: single.php?id=' . $id);
+	header('Location: /single.php?id=' . $id);
 	exit;
 }
 
@@ -28,5 +28,5 @@ $sql->execute();
 
 save_rate_cookie($id, $rate);
 
-header('Location: single.php?id=' . $id);
+header('Location: /single.php?id=' . $id);
 exit;

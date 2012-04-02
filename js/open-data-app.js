@@ -2,6 +2,16 @@ $(document).ready(function () {
 
 	var locations = [];
 
+
+	/****************************************************/
+	/***** Geolocation **********************************/
+	/****************************************************/
+
+
+
+
+
+
 	/****************************************************/
 	/***** Google Maps **********************************/
 	/****************************************************/
@@ -11,7 +21,7 @@ $(document).ready(function () {
 		// Create an object that holds options for the GMap
 		var gmapOptions = {
 			center : new google.maps.LatLng(45.423494,-75.697933)
-			, zoom : 13
+			, zoom : 12
 			, mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 
@@ -24,12 +34,16 @@ $(document).ready(function () {
 		// Loop through all the places and add a marker to the GMap
 		$('.garden-list > tr').each(function (i, elem) {
 			var garden = $(this).find('a').html();
+			
+			
+			
+			
 
 			// Create some HTML content for the info window
 			// Style the content in your CSS
 			var info = '<div class="info-window">'
 				+ '<strong>' + garden + '</strong>'
-				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Rate or Comment!</a>'
+				+ '<a href="garden/' + $(this).attr('data-id') + '">Rate or Comment!</a>'
 				+ '</div>'
 			;
 
@@ -51,12 +65,16 @@ $(document).ready(function () {
 				position : pos
 				, map : map
 				, title : garden
-				, icon : 'images/leaf-icon.png'
+				, icon : '/images/leaf-icon.png'
 				, animation: google.maps.Animation.DROP
 			});
-
+			
+			var tgout = $(this).get(0);
+			
 			// A function for showing this dinosaur's info window
 			function showInfoWindow (ev) {
+				var tg = tgout;
+				
 				if (ev.preventDefault) {
 					ev.preventDefault();
 				}
@@ -70,6 +88,8 @@ $(document).ready(function () {
 				infoWindow = new google.maps.InfoWindow({
 					content : info
 				});
+				console.log(tg);
+				console.log($(tg).parents('tr'));
 
 				infoWindow.open(map, marker);
 			}
@@ -124,7 +144,7 @@ $(document).ready(function () {
 				position : userLoc
 				, map : map
 				, title : 'You are here.'
-				, icon : 'images/user.png'
+				, icon : '/images/user.png'
 				, animation: google.maps.Animation.DROP
 			});
 		}
