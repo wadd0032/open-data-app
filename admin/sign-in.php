@@ -4,7 +4,7 @@ require_once '../includes/db.php';
 require_once '../includes/users.php';
 
 if (user_signed_in()) {
-	header('Location: /index.php');
+	header('Location: index.php');
 	exit;
 }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		} else {
 			if (passwords_match($password, $user['password'])) {
 				user_sign_in($user['id']);
-				header('Location: /index.php');
+				header('Location: index.php');
 				exit;
 			} else {
 				$errors['password-no-match'] = true;
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en-ca">
 <head>
 	<meta charset="utf-8">
-	<title>Sign In · Dino Bone Finder</title>
+	<title>Sign In · Ottawa Community Gardens</title>
 </head>
 <body>
 	<form method="post" action="sign-in.php">

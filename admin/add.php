@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$sql->bindValue(':latitude', $latitude, PDO::PARAM_STR);
 		$sql->execute();
 		
-		header('Location: /index.php');
+		header('Location: index.php');
 		exit;
 	}
 }
