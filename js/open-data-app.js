@@ -33,7 +33,7 @@ $(document).ready(function () {
 			// Style the content in your CSS
 			var info = '<div class="info-window">'
 				+ '<strong>' + garden + '</strong>'
-				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Rate or Comment!</a>'
+				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Click here for more information or to rate this park</a>'
 				+ '</div>'
 			;
 
@@ -64,6 +64,9 @@ $(document).ready(function () {
 			// A function for showing this dinosaur's info window
 			function showInfoWindow (ev) {
 				var tg = tgout;
+				
+				$('tr').removeClass('bold');
+				$(tg).addClass('bold');
 				
 				if (ev.preventDefault) {
 					ev.preventDefault();
@@ -134,7 +137,7 @@ $(document).ready(function () {
 				position : userLoc
 				, map : map
 				, title : 'You are here.'
-				, icon : '/images/user.png'
+				, icon : 'images/user.png'
 				, animation: google.maps.Animation.DROP
 			});
 		}
