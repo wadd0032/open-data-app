@@ -1,10 +1,10 @@
-<IfModule mod_rewrite.c>
+# <IfModule mod_rewrite.c>
 	#Makes pretty URLs for use by masking our query strings on single.php
 	
-	RewriteEngine On
-	RewriteRule  garden/([0-9]+) single.php?id=$1
+# RewriteEngine On
+# RewriteRule  garden/([0-9]+) single.php?id=$1
 	
-</IfModule>
+# </IfModule>
 
 # ----------------------------------------------------------------------
 # Proper MIME type for all files

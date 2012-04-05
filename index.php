@@ -48,7 +48,7 @@ include_once 'includes/wrapper-top.php';
 					<tr data-id="<?php echo $garden['id']; ?>">
 						<td class="names" itemscope itemtype="http://schema.org/CivicStructure">
 							<strong class="distance"></strong>
-								<a href="garden/<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
+								<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
 								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 									<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
 									<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">

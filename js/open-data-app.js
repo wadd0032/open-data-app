@@ -2,16 +2,6 @@ $(document).ready(function () {
 
 	var locations = [];
 
-
-	/****************************************************/
-	/***** Geolocation **********************************/
-	/****************************************************/
-
-
-
-
-
-
 	/****************************************************/
 	/***** Google Maps **********************************/
 	/****************************************************/
@@ -43,7 +33,7 @@ $(document).ready(function () {
 			// Style the content in your CSS
 			var info = '<div class="info-window">'
 				+ '<strong>' + garden + '</strong>'
-				+ '<a href="garden/' + $(this).attr('data-id') + '">Rate or Comment!</a>'
+				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Rate or Comment!</a>'
 				+ '</div>'
 			;
 
@@ -65,7 +55,7 @@ $(document).ready(function () {
 				position : pos
 				, map : map
 				, title : garden
-				, icon : '/images/leaf-icon.png'
+				, icon : 'images/leaf-icon.png'
 				, animation: google.maps.Animation.DROP
 			});
 			
