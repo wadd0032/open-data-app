@@ -19,4 +19,5 @@
 	
 	<header>
 		<h1>Ottawa Community Gardens</h1>
+		<img id="banner" src="images/banner-320.jpg" alt="">
 	</header>
