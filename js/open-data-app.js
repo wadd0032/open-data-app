@@ -11,7 +11,7 @@ $(document).ready(function () {
 		// Create an object that holds options for the GMap
 		var gmapOptions = {
 			center : new google.maps.LatLng(45.423494,-75.697933)
-			, zoom : 12
+			, zoom : 11
 			, mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 
@@ -25,15 +25,12 @@ $(document).ready(function () {
 		$('.garden-list > tr').each(function (i, elem) {
 			var garden = $(this).find('a').html();
 			
-			
-			
-			
 
 			// Create some HTML content for the info window
 			// Style the content in your CSS
 			var info = '<div class="info-window">'
 				+ '<strong>' + garden + '</strong>'
-				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Click here for more information or to rate this park</a>'
+				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Click here for more information, or to rate this park</a>'
 				+ '</div>'
 			;
 
@@ -81,8 +78,8 @@ $(document).ready(function () {
 				infoWindow = new google.maps.InfoWindow({
 					content : info
 				});
-				console.log(tg);
-				console.log($(tg).parents('tr'));
+				
+				infoWindow.maxWidth = 200;
 
 				infoWindow.open(map, marker);
 			}
@@ -204,5 +201,29 @@ $(document).ready(function () {
 				}
 			}
 		);
+	});
+
+	/****************************************************/
+	/***** Banners **********************************/
+	/****************************************************/
+
+	$(window).on("resize",  function(){
+		var width=document.documentElement.clientWidth;
+		
+		if(width<600){
+			$("#banner").attr("src", "images/banner-320.jpg");
+		}
+		
+		if(width>=600 && width<1000){
+			$("#banner").attr("src", "images/banner-600.jpg");
+		}
+		
+		if(width>=1000 && width<1500){
+		$("#banner").attr("src", "images/banner-1000.jpg");
+		}
+
+		if(width>=1500){
+		$("#banner").attr("src", "images/banner-1500.jpg");
+		}
 	});
 });
