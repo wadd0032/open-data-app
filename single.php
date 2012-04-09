@@ -73,8 +73,6 @@ include_once 'includes/wrapper-top.php';
 	<?php endif; ?>
 </div>
 
-<div id="single-map"></div>
-
 <?php
 
 include_once 'includes/wrapper-bottom.php';
