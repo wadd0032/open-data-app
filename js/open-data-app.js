@@ -64,7 +64,7 @@ $(document).ready(function () {
 				
 				$('tr').removeClass('bold');
 				$(tg).addClass('bold');
-				
+			
 				if (ev.preventDefault) {
 					ev.preventDefault();
 				}
