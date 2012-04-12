@@ -54,7 +54,7 @@ include_once 'includes/wrapper-top.php';
 	<?php if (isset($cookie[$id])) : ?>
 	
 	<h2>Your rating</h2>
-	<ol class="rater rater-usable">
+	<ol class="rater rater-usable clearfix">
 		<?php for ($i = 1; $i <= 5; $i++) : ?>
 			<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
 			<li class="rater-level <?php echo $class; ?>">★</li>

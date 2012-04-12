@@ -140,15 +140,13 @@ input[type="submit"]:hover {
 	line-height: 1.5;
 }
 
-tr.bold{
-	color: #660099;
-	
-	font-weight: bold;
-}
-
 .garden-list a {
 	color: #000;
 	text-decoration: none;
+}
+
+.bold{
+	font-weight: bold;
 }
 
 footer {
@@ -213,7 +211,7 @@ footer p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e8f7', endColorstr='#418cc2',GradientType=0 ); /* IE6-9 */
 }
 
-#single-info h1{
+#single-info h1 {
 	margin: 0;
 	padding: 0;
 
@@ -221,16 +219,45 @@ footer p {
 	font: bold 1.5em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+#single-info h2 {
+	margin: 0;
+	padding: 0;
+	display: inline;
+
+	font: bold 1.25em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#single-info ol {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
 dl {
 	display: inline-block;
+	width: 100%;
 }
 
 dt {
 	margin: 0;
 	padding: 0;
-	display: inline-block;
+	clear: both;
+	width: 100%;
+	display: block;
+	float: left;
+	
 	font-weight: bold;
+	line-height: 1.25
 }
+
+dd {
+	margin: 0;
+	padding-bottom: 2%;
+	clear: right;
+	display: inline;
+	float: left;
+}
+
 /**********************
 			RATING
 **********************/
@@ -361,6 +388,59 @@ ol.rater {
 	top: 0;
 	width: 30%;
 }
+
+
+/**********************
+			SINGLE-PAGE
+**********************/
+
+#single-info {
+	margin: 0;
+	padding: 3%;
+	width: 94%;
+	
+	background: #d5e8f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d5e8f7 0%, #418cc2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d5e8f7), color-stop(100%,#418cc2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* IE10+ */
+	background: linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e8f7', endColorstr='#418cc2',GradientType=0 ); /* IE6-9 */
+}
+
+#single-info h1{
+	margin: 0;
+	padding: 0;
+
+	color: #660099;
+	font: bold 1.5em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+dl {
+	display: inline-block;
+	width: 100%;
+}
+
+dt {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	width: 125px;
+	display: inline;
+	float: left;
+	
+	font-weight: bold;
+}
+
+dd {
+	margin: 0;
+	padding-bottom: 2%;
+	clear: right;
+	display: inline;
+	float: left;
+}
+
 
 }
 
