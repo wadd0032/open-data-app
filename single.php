@@ -48,7 +48,7 @@ include_once 'includes/wrapper-top.php';
 		<dt>Web</dt><dd><?php echo $garden['url']; ?></dd>
 		<dt>Longitude</dt><dd><?php echo $garden['longitude']; ?></dd>
 		<dt>Latitude</dt><dd><?php echo $garden['latitude']; ?></dd>
-		<dt>Average Rating</dt><dd><meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></dd>
+		<dt>Average Rating</dt><dd><meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> stars out of 5</meter></dd>
 	</dl>
 	
 	<?php if (isset($cookie[$id])) : ?>
@@ -64,14 +64,14 @@ include_once 'includes/wrapper-top.php';
 	<?php else : ?>
 	
 	<h2>Rate</h2>
-	<ol class="rater rater-usable">
+	<ol class="rater rater-usable clearfix">
 		<?php for ($i = 1; $i <= 5; $i++) : ?>
 		<li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
 		<?php endfor; ?>
 	</ol>
 	
 	<div>
-		<button id="home">Home</button>
+		<a class="home" href="index.php">Home</a>
 	</div>
 
 	<?php endif; ?>
