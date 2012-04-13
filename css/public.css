@@ -240,7 +240,7 @@ dl {
 
 dt {
 	margin: 0;
-	padding: 0;
+	padding-top: 2%;
 	clear: both;
 	width: 100%;
 	display: block;
@@ -252,11 +252,29 @@ dt {
 
 dd {
 	margin: 0;
-	padding-bottom: 2%;
+	padding: 0;
 	clear: right;
 	display: inline;
 	float: left;
 }
+
+button[id="home"] {
+	margin-bottom: 0;
+	padding: 0;
+	width: 62px;
+	height: 30px;
+
+	background: url("../images/home-btn.png") no-repeat left bottom;
+	border: 0;
+	
+	overflow: hidden;
+	text-indent: -999em;	
+}
+
+button[id="home"]:hover {
+	background: url("../images/home-hover.png") no-repeat left bottom;
+}
+
 
 /**********************
 			RATING
