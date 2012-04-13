@@ -70,6 +70,10 @@ include_once 'includes/wrapper-top.php';
 		<?php endfor; ?>
 	</ol>
 	
+	<div>
+		<button id="home">Home</button>
+	</div>
+
 	<?php endif; ?>
 </div>
 
