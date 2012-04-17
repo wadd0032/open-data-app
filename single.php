@@ -70,11 +70,12 @@ include_once 'includes/wrapper-top.php';
 		<?php endfor; ?>
 	</ol>
 	
+	<?php endif; ?>
+	
 	<div>
 		<a class="home" href="index.php">Home</a>
 	</div>
 
-	<?php endif; ?>
 </div>
 
 <?php

@@ -111,9 +111,34 @@ input[type="submit"]:hover {
 	
 	height: 350px;
 	width: 100%;
-	
-/*	border-bottom: 3px solid #f4cc20;*/
 }
+
+#tabs {
+	margin: 0;
+	padding-top: 5%;
+	
+	background-color: #d5e8f7;
+	border-bottom: 3px solid #f4cc20;
+	
+	overflow: hidden;
+	text-indent: -999em;
+}
+
+#tabs ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	list-style type: none;
+}
+
+#tabs li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	float: left;
+}
+
+
 
 #main-list {
 	margin: 0;
@@ -212,11 +237,11 @@ footer p {
 }
 
 #single-info h1 {
-	margin-top: 5%;
+	margin-top: 2%;
 	padding: 0;
 
 	color: #660099;
-	font: bold 1.1em/.5 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font: bold 1.1em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 #single-info h2 {
@@ -235,6 +260,8 @@ footer p {
 }
 
 dl {
+	margin: 0;
+	padding: 0;
 	display: inline-block;
 	width: 100%;
 }

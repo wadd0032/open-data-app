@@ -33,6 +33,13 @@ include_once 'includes/wrapper-top.php';
 	
 	<div id="map"></div>
 	
+	<div id="tabs">
+		<ul class="clearfix">
+			<li><a  class="proximity" href="#proximity">Proximity</a></li>
+			<li><a  class="popularity" href="#rating">Rating</a></li>
+		</ul>
+	</div>
+	
 	<div id="main-list" class="gradient">
 		<table>
 			<tbody class="garden-list">
@@ -65,7 +72,7 @@ include_once 'includes/wrapper-top.php';
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
-		</table>
+		</table>	
 	</div>
 
 </div>
