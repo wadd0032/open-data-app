@@ -171,7 +171,7 @@ $(document).ready(function () {
 		for (var j = 0; j < totalLocs; j++) {
 			// Find the <li> element that matches the current location
 			var $tr = $ratingList.find('[data-id="' + locDistances[j].id + '"]');
-			var $newTr = $tr.clone();
+			var $newTr = $tr.clone(true, true);
 			
 			// Add the distance to the start
 			// `toFixed()` makes the distance only have 1 decimal place
@@ -254,4 +254,14 @@ $(document).ready(function () {
 			$(".rating-tab a").removeClass("current-tab")
 			$(".proximity-tab a").addClass("current-tab")
 		})
+		
+		$('.proximity-list').on('click', 'a', function (ev) {
+			ev.preventDefault();
+			
+			var dataId = $(this).parents('tr').attr('data-id');
+			var theLink = $('.rating-list tr[data-id="' + dataId + '"]');
+			
+			console.log(theLink);
+			theLink.click();
+		});
 });

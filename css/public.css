@@ -15,13 +15,13 @@ body {
 	margin: 0;
 	padding:0;
 	min-width: 320 px;
+
 	font: normal 100%/1.5 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 header {
 	margin: 0;
-	padding:0;
-	
+	padding: 0;
 	display: block;
 	width: 100%;
 }
@@ -34,6 +34,7 @@ header img{
 header h1 {
 	margin: 0;
 	padding:0;
+
 	position: absolute;
 	left: -999em;
 }
@@ -69,7 +70,7 @@ button[id="geo"]:hover {
 }
 
 input[type="text"] {
-	margin-top: 2%;
+	margin: 2% 2% 0 0;
 	padding: 5px;
 	width: 75%;
 	height: 18px;
@@ -88,11 +89,10 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-	margin: 2% 1%;
+	margin: 0;
 	padding: 0;
 	width: 62px;
 	height: 30px;
-	float: right;
 
 	background: url("../images/search-btn.png") no-repeat left top;
 	border: 0;
@@ -115,20 +115,18 @@ input[type="submit"]:hover {
 
 #tabs {
 	margin: 0;
-	padding-top: 5%;
+	padding: 3% 3% 0 0;
 	
 	background-color: #d5e8f7;
 	border-bottom: 3px solid #f4cc20;
-	
-/*	overflow: hidden;
-	text-indent: -999em;
-*/}
+}
 
 #tabs ul {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
-	list-style type: none;
+	list-style-type: none;
+	float: right;
 }
 
 #tabs li {
@@ -140,6 +138,38 @@ input[type="submit"]:hover {
 
 #tabs li.proximity-tab {
 	display: none;
+}
+
+.rating-tab a{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 83px;
+	height: 30px;
+
+	background: url("../images/rating-btn.png") no-repeat left top;
+	
+	text-indent: -999em;
+}
+
+.rating-tab .current-tab {
+	background: url("../images/rating-current.png") no-repeat left top;
+}
+
+.proximity-tab a{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 83px;
+	height: 30px;
+
+	background: url("../images/proximity-btn.png") no-repeat left top;
+	
+	text-indent: -999em;
+}
+
+.proximity-tab .current-tab {
+	background: url("../images/proximity-current.png") no-repeat left top;
 }
 
 .main-list {
@@ -157,14 +187,18 @@ input[type="submit"]:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e8f7', endColorstr='#418cc2',GradientType=0 ); /* IE6-9 */
 }
 
+table {
+	border-collapse: collapse;
+}
+
 .names{
 	margin: 0;
 	padding: 0;
-	width: 41%;
+	width: 45%;
 
 	border-bottom:  2px solid #fff;
 	font-size: .875em;
-	line-height: 1.5;
+	line-height: 1.25;
 }
 
 .rating-list a,
@@ -215,6 +249,19 @@ footer p {
 	line-height: 1.5;
 }
 
+.info-window a {
+	padding-top: 2%;
+	display: block;
+	
+	color: #000;
+	font-size: .875em;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+.info-window a:hover{
+	text-decoration: underline;
+}
 .info-window strong {
 	color: #660099;
 	font-size: 1.1em;
@@ -253,7 +300,7 @@ footer p {
 
 #single-info h2 {
 	margin: 0;
-	padding-right: 4%;
+	padding: 2% 4% 0 0;
 	display: inline;
 	float: left;
 
@@ -299,7 +346,7 @@ dd {
 }
 
 .home {
-	margin: 3% 0;
+	margin: 4% 0 1% 0;
 	padding: 10;
 	display: inline-block;
 	width: 62px;
@@ -330,12 +377,12 @@ ol.rater {
 
 .rating,
 .distance {
-	padding: 0 2%;
-	width: 16%;
+	padding: 0;
+	width: 11%;
 
 	border-bottom:  2px solid #fff;
 	font-size: .875em;
-	text-align: center;
+	text-align: right;
 }
 
 .rater {
@@ -391,51 +438,246 @@ ol.rater {
 @media screen and (min-width: 600px)
 {
 
+
+/**********************
+			SINGLE-PAGE
+**********************/
+
+#single-info h1 {
+	margin-top: 0;
+}
+
+dt {
+	margin: 0;
+	padding-top: 3%;
+	display: inline;
+	
+	font: bold 1em/1.5 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+dt:first-child {
+	padding-top: 0;
+}
+
+dd {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	float: left;
+	
+	font-size: 1em;
+}
 }
 
 
 /*min-width = 1000px; max-width = 1499;*/
 @media screen and (min-width: 1000px)
 {
+
 #geolocation {
-	margin: 0;
-	padding: 1% 3% 1% 2%;
-	width: 30%;
+	padding: 2%;
+	width: 36%;
 	
-	background-color: #d5e8f7;
+	border-bottom: none;
+}
+
+input[type="text"] {
+	margin: 4% 2% 0 0;
 }
 
 #map {
 	margin: 0;
 	padding: 0;
-	
-	-webkit-box-shadow: -12px -1px 8px -8px #666666;
-	-moz-box-shadow: -12px -1px 8px -8px #666666;
-	box-shadow: -12px -1px 8px -8px #666666;
-	
+	height: 977px;
 	bottom: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 66%;
+	width: 60%;
+	float: right;
+
+	-webkit-box-shadow: -12px -1px 8px -8px #666666;
+	-moz-box-shadow: -12px -1px 8px -8px #666666;
+	box-shadow: -12px -1px 8px -8px #666666;
 }
 
-#main-list {
-	margin: 0;
-	padding: 0 3% 1% 2%;
-	width: 30%;
-	
-	background: #d5e8f7; /* Old browsers */
-	background: -moz-linear-gradient(top,  #d5e8f7 0%, #418cc2 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d5e8f7), color-stop(100%,#418cc2)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* IE10+ */
-	background: linear-gradient(top,  #d5e8f7 0%,#418cc2 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e8f7', endColorstr='#418cc2',GradientType=0 ); /* IE6-9 */
+#tabs {
+	padding: 0 2%;
+	width: 36%;
+}
+
+.main-list {
+	padding: 1% 2% 2%;
+	width: 36%;
 }
 
 .names{
+	font-size: .9em;
+}
+
+
+/**********************
+			SINGLE-PAGE
+**********************/
+
+/*#single-info h1 {
+	margin-top: 2%;
+	padding: 0;
+
+	color: #660099;
+	font: bold 1.1em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#single-info h2 {
+	margin: 0;
+	padding: 2% 4% 0 0;
+	display: inline;
+	float: left;
+
+	font: bold 1.1em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#single-info ol {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+dl {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+dt {
+	margin: 0;
+	padding-top: 3%;
+	clear: both;
+	width: 100%;
+	display: block;
+	float: left;
+	
+	font: bold .9em/1.1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+dt:first-child {
+	padding-top: 0;
+}
+
+dd {
+	margin: 0;
+	padding: 0;
+	clear: right;
+	display: inline;
+	float: left;
+	
+	font-size: .9em;
+}
+*/
+/*.home {
+	margin: 4% 0 1% 0;
+	padding: 10;
+	display: inline-block;
+	width: 62px;
+	height: 30px;
+
+	background: url("../images/home-btn.png") no-repeat left bottom;
+	border: 0;
+	
+	overflow: hidden;
+	text-indent: -999em;	
+}
+*/
+/*.home:hover {
+	background: url("../images/home-hover.png") no-repeat left bottom;
+}
+*/
+
+/**********************
+			RATING
+**********************/
+ol.rater {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	
+	list-style-type: none;
+}
+
+.rating,
+.distance {
+	padding: 0;
+	width: 11%;
+
+	border-bottom:  2px solid #fff;
+	font-size: .875em;
+	text-align: right;
+}
+
+.rater {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	
+	list-style-type: none;
+	line-height: 1;
+}
+
+.rater-level {
+	display: inline;
+
+	color: #fff;
+}
+
+.rater rater-usable {
+	margin: 0;
+	padding-top: 1%;
+	display: inline;
+	float: left;
+}
+
+.rater-level a,
+.rater-level a:link,
+.rater-level a:visited {
+	color:  #fff;
+	line-height: .75;
+	text-decoration: none;
+	vertical-align: bottom;
+}
+
+.rater-level a:hover,
+.rater-level a:focus,
+.rater-level a:active,
+.is-rated,
+.is-rated a,
+.is-rated a:link,
+.is-rated a:visited,
+.is-rated a:hover,
+.is-rated a:focus,
+.is-rated a:active,
+.is-rated-hover a,
+.is-rated-hover a:link,
+.is-rated-hover a:visited {
+	color:  #f4cc20;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.names{
 	margin: 0;
 	padding: 0;
 	width: 60%;
@@ -458,7 +700,7 @@ ol.rater {
 	top: 0;
 	width: 30%;
 }
-
+*/
 
 /**********************
 			SINGLE-PAGE
@@ -487,7 +729,7 @@ ol.rater {
 	font: bold 1.5em/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-dl {
+/*dl {
 	display: inline-block;
 	width: 100%;
 }
@@ -523,7 +765,7 @@ dd {
 
 }
 
-
+*/
 /**********************
 			SPECIAL
 **********************/

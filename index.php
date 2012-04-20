@@ -33,8 +33,8 @@ include_once 'includes/wrapper-top.php';
 	
 	<div id="map"></div>
 	
-	<div id="tabs">
-		<ul class="clearfix">
+	<div id="tabs" class="clearfix">
+		<ul>
 			<li class="proximity-tab"><a href="#proximity">Proximity</a></li>
 			<li class="rating-tab"><a  href="#rating">Rating</a></li>
 		</ul>
