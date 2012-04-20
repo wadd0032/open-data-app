@@ -23,7 +23,7 @@ $(document).ready(function () {
 		var infoWindow;
 
 		// Loop through all the places and add a marker to the GMap
-		$('.garden-list > tr').each(function (i, elem) {
+		$('.rating-list > tr').each(function (i, elem) {
 			var garden = $(this).find('a').html();
 			
 
@@ -126,6 +126,10 @@ $(document).ready(function () {
 			, userLoc = new google.maps.LatLng(lat, lng);
 		;
 
+		$(".proximity-tab").show();
+		$("#rating").hide();
+		$("#proximity").show();
+
 		// Create a new marker on the Google Map for the user
 		//  or just reposition the already existent one
 		if (userMarker) {
@@ -159,19 +163,21 @@ $(document).ready(function () {
 			return a.distance - b.distance;
 		});
 
-		var $gardenList = $('.garden-list');
+		var $ratingList = $('.rating-list');
+		var $proximityList = $('.proximity-list');
 
 		// We can use the resorted locations to reorder the list in place
 		// You may want to do something different like clone() the list and display it in a new tab
 		for (var j = 0; j < totalLocs; j++) {
 			// Find the <li> element that matches the current location
-			var $tr = $gardenList.find('[data-id="' + locDistances[j].id + '"]');
-
+			var $tr = $ratingList.find('[data-id="' + locDistances[j].id + '"]');
+			var $newTr = $tr.clone();
+			
 			// Add the distance to the start
 			// `toFixed()` makes the distance only have 1 decimal place
-			$tr.find('.distance').html(locDistances[j].distance.toFixed(1) + ' km');
+			$newTr.find('.rating').html(locDistances[j].distance.toFixed(1) + ' km');
 
-			$gardenList.append($tr);
+			$proximityList.append($newTr);
 		}
 	}
 
@@ -229,8 +235,23 @@ $(document).ready(function () {
 		}
 	});
 	
-	
-	
+	/****************************************************/
+	/***** Tabs **********************************/
+	/****************************************************/
 
+		$(".rating-tab a").on ("click", function(ev){
+			ev.preventDefault();
+			$("#rating").show();
+			$("#proximity").hide();
+			$(".rating-tab a").addClass("current-tab")
+			$(".proximity-tab a").removeClass("current-tab")
+		})
 	
+		$(".proximity-tab a").on ("click", function(ev){
+			ev.preventDefault();
+			$("#rating").hide();
+			$("#proximity").show();
+			$(".rating-tab a").removeClass("current-tab")
+			$(".proximity-tab a").addClass("current-tab")
+		})
 });

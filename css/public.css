@@ -120,9 +120,9 @@ input[type="submit"]:hover {
 	background-color: #d5e8f7;
 	border-bottom: 3px solid #f4cc20;
 	
-	overflow: hidden;
+/*	overflow: hidden;
 	text-indent: -999em;
-}
+*/}
 
 #tabs ul {
 	margin: 0;
@@ -138,9 +138,11 @@ input[type="submit"]:hover {
 	float: left;
 }
 
+#tabs li.proximity-tab {
+	display: none;
+}
 
-
-#main-list {
+.main-list {
 	margin: 0;
 	padding: 3%;
 	width: 94%;
@@ -165,7 +167,8 @@ input[type="submit"]:hover {
 	line-height: 1.5;
 }
 
-.garden-list a {
+.rating-list a,
+.proximity-list a {
 	color: #000;
 	text-decoration: none;
 }
@@ -173,6 +176,10 @@ input[type="submit"]:hover {
 .bold{
 	font-weight: bold;
 }
+
+#proximity{
+ 	display: none;
+ }
 
 footer {
 	margin: 0;
@@ -321,12 +328,14 @@ ol.rater {
 	list-style-type: none;
 }
 
-.rating {
+.rating,
+.distance {
 	padding: 0 2%;
 	width: 16%;
 
 	border-bottom:  2px solid #fff;
 	font-size: .875em;
+	text-align: center;
 }
 
 .rater {
@@ -340,7 +349,7 @@ ol.rater {
 }
 
 .rater-level {
-	float: left;
+	display: inline;
 
 	color: #fff;
 }

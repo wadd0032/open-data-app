@@ -35,14 +35,14 @@ include_once 'includes/wrapper-top.php';
 	
 	<div id="tabs">
 		<ul class="clearfix">
-			<li><a  class="proximity" href="#proximity">Proximity</a></li>
-			<li><a  class="popularity" href="#rating">Rating</a></li>
+			<li class="proximity-tab"><a href="#proximity">Proximity</a></li>
+			<li class="rating-tab"><a  href="#rating">Rating</a></li>
 		</ul>
 	</div>
 	
-	<div id="main-list" class="gradient">
+	<div id="rating" class="main-list">
 		<table>
-			<tbody class="garden-list">
+			<tbody class="rating-list">
 				<?php foreach ($results as $garden) : ?>
 					<?php
 						if ($garden['rate_count'] > 0) {
@@ -54,7 +54,6 @@ include_once 'includes/wrapper-top.php';
 					
 					<tr data-id="<?php echo $garden['id']; ?>">
 						<td class="names" itemscope itemtype="http://schema.org/CivicStructure">
-							<strong class="distance"></strong>
 								<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
 								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 									<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
@@ -63,15 +62,18 @@ include_once 'includes/wrapper-top.php';
 						</td>
 						<td class="rating">
 							<ol class="rater">
-								<?php for ($i = 1; $i <= 5; $i++) : ?>
-									<?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
-									<li class="rater-level <?php echo $class; ?>">★</li>
-								<?php endfor; ?>
+								<?php for ($i = 1; $i <= 5; $i++) : ?><?php $class = ($i <= $rating) ? 'is-rated' : ''; ?><li class="rater-level <?php echo $class; ?>">★</li><?php endfor; ?>
 							</ol>
 						</td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
+		</table>	
+	</div>
+
+	<div id="proximity" class="main-list">
+		<table>
+			<tbody class="proximity-list"></tbody>
 		</table>	
 	</div>
 
