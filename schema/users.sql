@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.3.1
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 25, 2012 at 08:00 PM
--- Server version: 5.1.57
--- PHP Version: 5.3.6
+-- Generation Time: Apr 23, 2012 at 07:03 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,7 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `bradlet`
+-- Database: `wadd0032`
 --
 
 -- --------------------------------------------------------
@@ -31,4 +30,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`) VALUES
+(1, 'wadd0032@algonquinlive.com', '$2a$12$i1a.pNUXDtlROTSpG89pwe2RlWllr8G3Y7uClZCUCnVIHWP9cvc4W'),
+(2, 'bradlet@algonquincollege.com ', 'password');
