@@ -72,8 +72,8 @@ include_once 'includes/wrapper-top.php';
 	
 	<?php endif; ?>
 	
-	<div>
-		<a class="home" href="index.php">Home</a>
+	<div class="home">
+		<a href="index.php">Home</a>
 	</div>
 
 </div>
