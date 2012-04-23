@@ -2,6 +2,11 @@
 
 require_once '../includes/db.php';
 
+if (!user_signed_in()) {
+header('Location: sign-in.php');
+exit;
+}
+
 $results = $db->query('
 	SELECT id, name, street_address, longitude, latitude
 	FROM garden_locations

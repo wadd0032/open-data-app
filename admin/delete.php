@@ -9,6 +9,11 @@ if (empty($id)) {
 
 require_once '../includes/db.php';
 
+if (!user_signed_in()) {
+header('Location: sign-in.php');
+exit;
+}
+
 $sql = $db->prepare('
 	DELETE FROM garden_locations
 	WHERE id = :id
