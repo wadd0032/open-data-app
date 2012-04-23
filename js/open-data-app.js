@@ -65,6 +65,8 @@ $(document).ready(function () {
 				
 				$('tr').removeClass('bold');
 				$(tg).addClass('bold');
+				
+				$('.proximity-list tr[data-id="' + $(tg).attr('data-id') + '"]').addClass('bold');
 			
 				if (ev.preventDefault) {
 					ev.preventDefault();
@@ -88,7 +90,7 @@ $(document).ready(function () {
 			// Add a click event listener for the marker
 			google.maps.event.addListener(marker, 'click', showInfoWindow);
 			// Add a click event listener to the list item
-			google.maps.event.addDomListener($(this).get(0), 'click', showInfoWindow);
+			$(this).on('click', showInfoWindow);
 		});
 	}
 
@@ -171,7 +173,7 @@ $(document).ready(function () {
 		for (var j = 0; j < totalLocs; j++) {
 			// Find the <li> element that matches the current location
 			var $tr = $ratingList.find('[data-id="' + locDistances[j].id + '"]');
-			var $newTr = $tr.clone(true, true);
+			var $newTr = $tr.clone();
 			
 			// Add the distance to the start
 			// `toFixed()` makes the distance only have 1 decimal place
@@ -214,8 +216,7 @@ $(document).ready(function () {
 	/****************************************************/
 	/***** Banners **********************************/
 	/****************************************************/
-
-	$(window).on("resize",  function(){
+	function bannerFixer(){
 		var width=document.documentElement.clientWidth;
 		
 		if(width<600){
@@ -233,7 +234,9 @@ $(document).ready(function () {
 		if(width>=1500){
 		$("#banner").attr("src", "images/banner-1500.jpg");
 		}
-	});
+	}
+	$(window).on("resize", bannerFixer);
+		bannerFixer();
 	
 	/****************************************************/
 	/***** Tabs **********************************/
@@ -261,7 +264,8 @@ $(document).ready(function () {
 			var dataId = $(this).parents('tr').attr('data-id');
 			var theLink = $('.rating-list tr[data-id="' + dataId + '"]');
 			
-			console.log(theLink);
+			$('tr').removeClass('bold');
 			theLink.click();
+			$(this).parents('tr').addClass('bold');
 		});
 });
