@@ -24,7 +24,7 @@ include_once 'includes/wrapper-top.php';
 ?>
 <div class="wrapper">
 	<div id="geolocation">
-		<button id="geo">Where Am I?</button>
+		<button id="geo">oWhere Am I?</button>
 		<form id="geo-form">
 			<input type="text" id="adr" placeholder="Location: address, intersection or postal code">
 			<input type="submit">
