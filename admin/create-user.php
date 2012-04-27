@@ -1,12 +1,7 @@
 <?php
 
-require_once 'includes/db.php';
-require_once 'includes/users.php';
-
-if (!user_signed_in()) {
-header('Location: sign-in.php');
-exit;
-}
+require_once '../includes/db.php';
+require_once '../includes/users.php';
 
 $email = 'bradlet@algonquincollege.com';
 $password = 'password';
