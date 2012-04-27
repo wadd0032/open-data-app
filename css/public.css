@@ -424,6 +424,8 @@ ol.rater {
 }
 
 
+
+
 /*min-width = 600px; max-width = 999;*/
 @media screen and (min-width: 600px)
 {
@@ -627,74 +629,6 @@ dd {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.names{
-	margin: 0;
-	padding: 0;
-	width: 60%;
-
-	border-bottom:  2px solid #fff;
-	font-size: .875em;
-}
-
-#single-map {
-	margin: 0;
-	padding: 0;
-	
-	-webkit-box-shadow: -12px -1px 8px -8px #666666;
-	-moz-box-shadow: -12px -1px 8px -8px #666666;
-	box-shadow: -12px -1px 8px -8px #666666;
-	
-	bottom: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 30%;
-}
-*/
-
-/**********************
-			SINGLE-PAGE
-**********************/
-
-/*dl {
-	display: inline-block;
-	width: 100%;
-}
-
-dt {
-	margin: 0;
-	padding: 0;
-	clear: both;
-	width: 125px;
-	display: inline;
-	float: left;
-	
-	font-weight: bold;
-}
-
-dd {
-	margin: 0;
-	padding-bottom: 2%;
-	clear: right;
-	display: inline;
-	float: left;
-}
-
-
-}
 
 
 /*min-width = 1500px; max-width = 1800;*/
