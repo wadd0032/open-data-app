@@ -49,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		require_once '../includes/db.php';
 		
 		$sql = $db->prepare('
-			INSERT INTO garden_locations (name, street_address, longitude, latitude)
-			VALUES (:name, :street_address, :longitude, :latitude)
+			INSERT INTO garden_locations (name, street_address, longitude, latitude,contact,email,url)
+			VALUES (:name, :street_address, :longitude, :latitude,:contact,:email,:url)
 		');
 		$sql->bindValue(':name', $name, PDO::PARAM_STR);
 		$sql->bindValue(':street_address', $street_address, PDO::PARAM_STR);
