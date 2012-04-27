@@ -13,7 +13,7 @@ $results = $db->query('
 	ORDER BY name ASC
 ');
 
-include_once 'includes/wrapper-top.php';
+include_once '../includes/wrapper-top.php';
 
 ?>
 
@@ -39,6 +39,6 @@ include_once 'includes/wrapper-top.php';
 
 <?php
 
-include_once 'includes/wrapper-bottom.php';
+include_once '../includes/wrapper-bottom.php';
 
 ?>
