@@ -37,7 +37,7 @@ include_once '../includes/wrapper-top.php';
 	</ul>
 </div>
 
-<a href="sign-out.php">Add a Garden</a>
+<a href="sign-out.php">Sign Out</a>
 
 <?php
 
